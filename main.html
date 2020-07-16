@@ -1,0 +1,46 @@
+<!--Main Page for Web Development Project-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chrysics Main Page</title>
+        <link href='./css/style.css' rel='stylesheet' type="text/css"></link>
+    </head>
+    <body>
+        <header>
+            <div class='page-header'>Christopher Eckerson</div>
+            <nav>
+                <ul class='nav-bar'>
+                    <li class='nav-button' id='nav-current'><a href='main.html'>HOME</a></li>
+                    <li class='nav-button'><a href='academia.html'>ACADEMIA</a></li>
+                    <li class='nav-button'><a href='blog.html'>BLOG</a></li>
+                    <li class='nav-button'><a href='contact.html'>CONTACT</a></li>
+                </ul>   
+            </nav>
+        </header>
+        <div>
+            
+            <div id='carousel'>
+                <button class=navButton id='prevButton'><</button>
+                <button class=navButton id='nextButton'>></button>
+                <div class='photo'>
+                    <img src="./img/education.jpg" style="object-position: 70% 0">
+                </div>
+                <div class='photo'>
+                    <img src="./img/music.jpg" style="object-position: 0 20%">
+                </div>
+                <div class='photo'>
+                    <img src="./img/physics.jpg" style="object-position: 0">
+                </div>
+                
+            </div>
+            <div id='carousel-nav'>
+                <ol>
+                    <li class='nav-dot'></li>
+                    <li class='nav-dot'></li>
+                    <li class='nav-dot'></li>
+                </ol>
+            </div>
+        </div>
+    </body>
+    <script src="./javascript/carouselScript.js"></script>
+</html>

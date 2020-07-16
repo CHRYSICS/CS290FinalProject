@@ -1,0 +1,180 @@
+/*Body Background of webpages*/
+body{
+    width:90%;
+    margin:auto;
+    font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	line-height:1.5;
+	padding:0;
+}
+
+body.altBackground{
+    background-color: lightskyblue;
+}
+
+/*webpage header styles*/
+.page-header{
+    font-size: xx-large;
+}
+.nav-bar{
+    list-style-type: none;
+    text-align: center;
+    height: 20px;
+    margin: auto;
+    padding: 0;
+}
+
+.nav-button{
+    float: left;
+    display: block;
+    width: 25%;
+    background-color: teal;
+    margin: -1px;
+    border: 1px solid black;
+}
+.nav-button a{
+    color: black;
+    text-decoration: none;
+}
+#nav-current{
+    background-color: turquoise;
+}
+
+/*Carousel styles*/
+#carousel{
+    width: 80%;
+    height: 30%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.navButton{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    opacity: 80%;
+    color: white;
+    font-size: xx-large;
+    position: relative;
+}
+#prevButton{
+    float: left;
+    top: 200px;
+}
+
+#nextButton{
+    float: right;
+    top: 200px;
+}
+#carousel .photo{
+    display: none;
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+}
+
+#carousel .photo.current{
+    display: block;
+}
+
+#carousel .photo img{
+    width:100%;
+    height: 300pt;
+    object-fit:cover;
+
+}
+
+#carousel-nav{
+    list-style-type: none;
+    text-align: center;
+}
+
+.nav-dot{
+    width:20px;
+    height:20px;
+    margin: 0 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: grey;
+}
+
+.nav-dot.current{
+    background-color: teal;
+}
+
+/*Blog entry styles*/
+div.entry{
+    width:90%;
+    display:block;
+    margin: 15px auto;
+    overflow: auto;
+}
+
+div.entry h3{
+    border-bottom: double;
+}
+
+section.description{
+    float: left;
+    width: 55%;
+}
+
+aside.preview{
+    float: right;
+    width: 35%;
+    overflow: auto;
+}
+
+aside.preview img{
+    width:100%;
+}
+
+aside.preview .scroll-box{
+    float: right;
+    width: 100%;
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: black;
+    color:green;
+    border: 1px solid black;
+    font-size: xx-small;
+}
+
+/*Contact Bio page styles*/
+#bio img{
+    width:30%;
+    float: left;
+    margin: 20px 0;
+}
+
+#bio section{
+    float: right;
+    width: 65%;
+}
+#bio h3{
+    text-align: center;
+}
+
+/*academia style settings*/
+div.school-logo{
+    width: 20%;
+    float: left;
+}
+
+div.school-logo img{
+    max-width:100px;
+}
+div.school-info{
+    width: 80%;
+    float: right;
+    text-align: left;
+}
+div.school-info table{
+    border: 1px black solid;
+    background-color:white;
+}
+
+th{
+    border-bottom: 1px black solid;
+}

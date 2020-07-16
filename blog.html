@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Personal Blog</title>
+        <link href='./css/style.css' rel='stylesheet' type="text/css"></link>
+    </head>
+    <body class='altBackground'>
+        <header>
+            <div class='page-header'>Personal Blog</div>
+            <nav>
+                <ul class='nav-bar'>
+                    <li class='nav-button'><a href='main.html'>HOME</a></li>
+                    <li class='nav-button'><a href='academia.html'>ACADEMIA</a></li>
+                    <li class='nav-button' id='nav-current'><a href='blog.html'>BLOG</a></li>
+                    <li class='nav-button'><a href='contact.html'>CONTACT</a></li>
+                </ul>   
+            </nav>
+        </header>
+        <div class='entry' id='Naturally_Green_Project'>
+            <h2>Naturally Green Cleaning Web Client Project</h2>
+                <h3>November 8th, 2018 - <span>HTML</span></h3>
+            <section class='description'>
+                <p>
+                    This was an earlier project I completed a few years back, when I was first
+                    learning how to code. This was a labor of love for months to help my friend
+                    who was wanting to launch a website for their natural green cleaning business.
+                </p>
+            </section>
+            <aside class='preview'>
+                <img src="./img/businesscard.png">
+                <a href="https://naturally-green-cleaning.com">Naturally Green Cleaning Website Project</a>
+            </aside>
+        </div>
+        <div class='entry' id='Xiangqi_Game_Project'>
+            <h2>Xiangqi Game Portfolio Project</h2>
+                <h3>March 12, 2020 - <span>Python</span></h3>
+            <section class='description'>
+                <p>
+                    This was a class project designing our own Xiangqi Game.  In the future, this section would include
+                    some detail about exactly how the project was designed and then would include an read more
+                    hyperlink that takes the user to the project page, where they would find the full code (unlike seen to the left).
+                    This was just a snippet of the code, in the scroll box, that I would like to in the future have the content load
+                    the script from a file and not hard coded into the html file. 
+                </p>
+            </section>
+            <aside class='preview'>
+                <div class='scroll-box'>
+                    <code>
+                        class XiangqiGame:
+                        """Represents Game of Xiangqi with players, board pieces, and a game state"""
+
+                        def __init__(self):
+                            """Initialize Xiangqi game parameters, set up the game piece"""
+                            self._game_state = "UNFINISHED"
+                            self._active_player = "RED"
+                            self._other_player = "BLACK"
+                            self._board_dictionary = {}
+                            self.board_piece_setup()
+                            self._generals = {"RED": self._board_dictionary[(4, 0)],
+                                            "BLACK": self._board_dictionary[(4, 9)]}
+
+                        def board_piece_setup(self):
+                            """Sets up board dictionary, where keys are starting locations and GamePieces are values"""
+                            # Place/initialize player's Cannon GamePieces at starting locations, by index notation (col, row)
+                            self._board_dictionary[(4, 9)] = General("BLACK", (4, 9))
+                            self._board_dictionary[(1, 2)] = Cannon("RED", (1, 2))
+                            self._board_dictionary[(1, 7)] = Cannon("BLACK", (1, 7))
+                            self._board_dictionary[(7, 2)] = Cannon("RED", (7, 2))
+                            self._board_dictionary[(7, 7)] = Cannon("BLACK", (7, 7))
+                            # Create list of GamePiece classes that are found in the back row of each player
+                            back_row = [Chariot, Horse, Elephant, Advisor, General, Advisor, Elephant, Horse, Chariot]
+                            # loop through each column on board
+                            for column in range(9):
+                                # index = column was added for readability, helps distinguish the different uses of the same value
+                                index = column
+                                # For each column, place/initialize the GamePiece class found in the back row for each player
+                                self._board_dictionary[(column, 0)] = back_row[index]("RED", (column, 0))
+                                self._board_dictionary[(column, 9)] = back_row[index]("BLACK", (column, 9))
+                                # for even column values, place/initialize the Solder GamePiece
+                                if column % 2 == 0:
+                                    # Place/initialize player's Soldier GamePieces at starting locations, by index notation (col, row)
+                                    self._board_dictionary[(column, 3)] = Soldier("RED", (column, 3))
+                                    self._board_dictionary[(column, 6)] = Soldier("BLACK", (column, 6))
+
+                
+                    </code>
+                </div>
+            </aside>
+        </div>
+    </body>
+</html>
