@@ -1,11 +1,11 @@
-var schoolData = [{header:"SCHOOL",
+var schoolData = [{header:"SCHOOL EXPERIENCE",
                     name:"Oregon State University: College of Computer Science & Engineering",
                     degree: "Post-Bachelor Computer Science Degree",
-                enrolled:"Fall 2019 - Present (expected graduation Spring 2021",
-                    awards:"Dean's List",
+                enrolled:"Fall 2019 - Present (expected graduation Spring 2021)",
+                    awards:"Dean's List 2019-2020",
                     logo:"./img/OSU_vertical_2C_O_over_B.png",
                 citation:"https://oregonstate.app.box.com/s/ef2r8wr5ptzaomck0s6e28gaqw5zjh7q/file/376698848043"},
-                    {header:"SCHOOL",
+                    {header:"SCHOOL EXPERIENCE",
                     name:"University of Alaska Fairbanks: College of Natural Science and Mathematics",
                     degree:"Bachelor in Science Physics degree",
                     enrolled:"Fall 2013 - Spring 2017",
@@ -87,4 +87,40 @@ schoolData.forEach(school => {
     //Add content to school container then page
     schoolDiv.appendChild(schoolData);
     schoolsContainer.appendChild(schoolDiv);
-})
+});
+
+// adjust for mobile viewing
+function adjustforsize(mywindow){
+  if (mywindow.matches){
+    var headers = document.querySelectorAll("thead")
+    for (let head of headers){
+      head.addEventListener("click", toggletablecontent)
+    };
+    
+    var info = document.querySelectorAll("tbody")
+    for (let details of info){
+      details.style.display = "none"
+    };
+  };
+};
+
+// get window width info and call adjust function
+var mywindow = window.matchMedia("(max-width: 700px)");
+
+adjustforsize(mywindow);
+mywindow.addListener(adjustforsize);
+
+// toogle the table to be visible
+function toggletablecontent(){
+  target = event.target
+  parent = target.parentNode
+  parent = parent.parentNode
+  details = parent.nextSibling
+  console.log(details)
+  if (details.style.display == "none"){
+    details.style.display  = "block";
+  } else{
+    details.style.display  = "none";
+  }
+}
+
